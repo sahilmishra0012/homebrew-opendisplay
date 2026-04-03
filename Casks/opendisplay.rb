@@ -11,6 +11,10 @@ cask "opendisplay" do
 
   app "OpenDisplay.app"
 
+  postflight do
+    system "open", "#{appdir}/OpenDisplay.app"
+  end
+
   zap trash: [
     "~/Library/Preferences/com.opendisplay.app.plist",
   ]
