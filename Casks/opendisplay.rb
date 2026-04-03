@@ -12,6 +12,7 @@ cask "opendisplay" do
   app "OpenDisplay.app"
 
   postflight do
+    system "xattr", "-cr", "#{appdir}/OpenDisplay.app"
     system "open", "#{appdir}/OpenDisplay.app"
   end
 
